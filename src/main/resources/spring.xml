@@ -36,8 +36,12 @@
 
 <bean name="specialdiscountDao" class="com.hand.dao.impl.SpecialDiscountDaoImpl">
 <property name="sessionFactory" ref="sessionFactory"/>
-
 </bean>
+
+<bean name="priceListDao" class="com.hand.dao.impl.PriceListDaoImpl">
+<property name="sessionFactory" ref="sessionFactory"/>
+</bean>
+
 
 
 		<!-- 开启用注解方式注入bean -->

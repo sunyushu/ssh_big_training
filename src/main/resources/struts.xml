@@ -56,6 +56,9 @@
 		<action name="listSpecialDiscount" class="com.hand.action.doSpecialDiscountAction" method="list">
 		<result name="success">/jsp/specialDiscountList.jsp</result>
 		</action>
+		<action name="listPrice" class="com.hand.action.doPriceListAction" method="list">
+		<result name="priceListSuccess">/jsp/priceList.jsp</result>
+		</action>
 		<action name="*_*" class="com.hand.action.{1}Action" method="{2}">
 		<interceptor-ref name="defaultStack"/>
 		<result name="success" type="redirectAction">listSpecialDiscount!list</result>
@@ -64,6 +67,7 @@
 		<result name="tologin" type="redirect">
 			<param name="location">/jsp/login.jsp</param>
 			</result>
+			<result name="priceListSuccess" type="redirectAction">listPrice!list</result>
 		</action>
 	</package>
 	
